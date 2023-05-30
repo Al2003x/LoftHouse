@@ -86,6 +86,19 @@ a {
   max-width: var(--container-width);
 }
 
+.section__title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: var(--font-accent);
+  font-size: 36px;
+  line-height: 48px;
+  color: #d4c17f;
+
+  &--mb {
+    margin-bottom: 88px;
+  }
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

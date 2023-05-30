@@ -1,0 +1,29 @@
+.feedback {
+  padding: 180px 0;
+  background: linear-gradient(
+      180deg,
+      var(--color-dark) 10.42%,
+      rgba(36, 43, 51, 0) 50.52%,
+      var(--color-dark) 90.1%
+    ),
+    linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)),
+    url("../img/cta-bg.jpg"), #c4c4c4;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 24px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+  }
+}
