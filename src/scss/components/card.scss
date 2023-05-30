@@ -1,0 +1,44 @@
+.card {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      #242b33 0%,
+      rgba(36, 43, 51, 0) 0.01%,
+      var(--color-dark) 100%
+    );
+  }
+
+  &:hover .card__image {
+    transform: scale(1.1);
+  }
+
+  &:hover .card__title {
+    color: var(--color-accent);
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    left: 50px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    z-index: 2;
+  }
+
+  &__image {
+    transition: transform 0.5s ease-in-out;
+  }
+}
