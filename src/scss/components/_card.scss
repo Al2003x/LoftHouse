@@ -20,6 +20,7 @@
 
   &:hover .card__image {
     transform: scale(1.1);
+    filter: contrast(110%) brightness(1.2) saturate(1.2);
   }
 
   &:hover .card__title {
@@ -39,6 +40,6 @@
   }
 
   &__image {
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }

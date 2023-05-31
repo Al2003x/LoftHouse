@@ -33,6 +33,14 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
@@ -84,6 +92,19 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: var(--font-accent);
+  font-size: 36px;
+  line-height: 48px;
+  color: #d4c17f;
+
+  &--mb {
+    margin-bottom: 88px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
