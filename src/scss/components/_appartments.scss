@@ -1,5 +1,16 @@
 .appartments {
-  
+  position: relative;
+
+  &:before {
+    content: "III";
+    right: calc(50% + 555px);
+    transform: translate(50%, 0%);
+
+    @include beforeNumber;
+
+    top: 50px;
+  }
+
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

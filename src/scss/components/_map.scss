@@ -1,5 +1,16 @@
 .map {
+  position: relative;
   padding: 180px 0;
+
+  &::before {
+    content: "V";
+    right: calc(50% + 555px);
+    transform: translate(50%, 0%);
+
+    @include beforeNumber;
+
+    top: 200px;
+  }
 
   &__container {
     height: 358px;
