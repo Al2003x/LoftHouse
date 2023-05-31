@@ -55,6 +55,10 @@
     line-height: 21px;
     color: var(--color-light);
 
+    &:hover {
+      color: var(--color-accent);
+    }
+
     &::before {
       position: absolute;
       left: 0;

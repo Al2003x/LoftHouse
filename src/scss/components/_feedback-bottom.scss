@@ -1,0 +1,15 @@
+.feedback-bottom {
+  padding: 180px 0;
+
+  & .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  & .form__text {
+    max-width: 256px;
+    margin-right: 35px;
+  }
+}
