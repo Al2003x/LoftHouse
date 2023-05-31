@@ -69,12 +69,12 @@
     }
 
     &-map::before {
-      background-image: url("../img/svg/map.svg");
+      background-image: url("./img/svg/map.svg");
       background-repeat: no-repeat;
     }
 
     &-tel::before {
-      background-image: url("../img/svg/phone.svg");
+      background-image: url("./img/svg/phone.svg");
       background-repeat: no-repeat;
     }
   }
