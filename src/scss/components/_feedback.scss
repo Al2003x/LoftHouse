@@ -2,12 +2,12 @@
   padding: 180px 0;
   background: linear-gradient(
       180deg,
-      var(--color-dark) 10.42%,
+      #242b33 10.42%,
       rgba(36, 43, 51, 0) 50.52%,
-      var(--color-dark) 90.1%
+      #242b33 90.1%
     ),
     linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)),
-    url("./img/cta-bg.jpg"), #c4c4c4;
+    url('../img/cta-bg.jpg'), #c4c4c4;
 
   &__wrapper {
     display: flex;

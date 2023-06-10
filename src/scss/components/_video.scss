@@ -1,6 +1,7 @@
 .video {
   position: relative;
   text-align: center;
+  overflow: hidden;
 
   &::after {
     content: "IV";
