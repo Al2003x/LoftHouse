@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -123,4 +124,17 @@ p {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.burger {
+  display: none;
+
+  @include burger;
+
+  color: var(--color-light);
+  --burger-height: 20px;
+
+  @media ( max-width: 959px) {
+    display: block;
+  }
 }

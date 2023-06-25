@@ -1,9 +1,15 @@
 .nav {
+
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 39px;
+
+    @media (max-width: 959px) {
+      flex-direction: column;
+      padding: 100px;
+    }
   }
 
   &__link {
@@ -14,69 +20,40 @@
     color: var(--color-light);
     transition: hover 0.2s ease-in-out;
 
-    &:hover {
-      color: var(--color-accent);
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--color-dark);
+    }
+
+    &:active {
+      color: var(--color-dark);
+    }
+
+    @media ( max-width: 959px ) {
+      font-size: 22px;
     }
   }
 
-  &-burger__btn {
-    /* display: none; */
-    position: relative;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    background-color: transparent;
-    color: var(--color-light);
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--color-light);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      top: calc(100% - 2px);
-    }
-
-    &--active {
-      &::before {
-        top: 50%;
-        transform: rotate(45deg);
-        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-      }
-
-      &::after {
-        top: 50%;
-        transform: rotate(-45deg);
-        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-      }
-
-      .nav-burger__line {
-        transform: scale(0);
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-  }
-
-  &-burger__line {
-    position: absolute;
-    top: 50%;
+  @media ( max-width: 959px) {
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-light);
-    transform: translateY(-50%);
+    width: 60%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 100;
   }
+}
+
+.header__nav.menu--active {
+  transform: none;
+  visibility: visible;
 }
