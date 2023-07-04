@@ -1,9 +1,15 @@
 .nav {
+
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 39px;
+
+    @media (max-width: 959px) {
+      flex-direction: column;
+      padding: 100px;
+    }
   }
 
   &__link {
@@ -14,8 +20,40 @@
     color: var(--color-light);
     transition: hover 0.2s ease-in-out;
 
-    &:hover {
-      color: var(--color-accent);
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--color-dark);
+    }
+
+    &:active {
+      color: var(--color-dark);
+    }
+
+    @include small-tablet {
+      font-size: 22px;
     }
   }
+
+  @include small-tablet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 100;
+  }
+}
+
+.header__nav.menu--active {
+  transform: none;
+  visibility: visible;
 }

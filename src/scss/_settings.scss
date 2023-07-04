@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -36,6 +37,9 @@ a {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
   padding: 0;
@@ -91,7 +95,11 @@ p {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  max-width: var(--content-width);
+
+  &__small {
+    max-width: var(--content-width-small);
+  }
 }
 
 .section__title {
@@ -104,6 +112,10 @@ p {
 
   &--mb {
     margin-bottom: 88px;
+
+    @include small-tablet {
+      margin-bottom: 45px;
+    }
   }
 }
 
@@ -123,4 +135,21 @@ p {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.burger {
+  display: none;
+
+  @include burger;
+
+  color: var(--color-light);
+  --burger-height: 20px;
+
+  @media ( max-width: 959px) {
+    display: block;
+  }
+}
+
+.none {
+  display: none !important;
 }

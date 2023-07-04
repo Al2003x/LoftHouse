@@ -22,6 +22,10 @@
     &:focus {
       background-color: rgba(255, 255, 255, 0.4);
     }
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -33,7 +37,6 @@
   }
 
   &__btn {
-    width: 255px;
     padding: 12px;
     font-family: var(--font-main);
     font-size: 16px;
@@ -49,5 +52,10 @@
     &:hover {
       background-color: saturate(#D4C17F, 10%);
     }
+
+    @include small-tablet {
+      width: 100%;
+    }
+
   }
 }

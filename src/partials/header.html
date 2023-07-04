@@ -1,28 +1,31 @@
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
     <div class="header__logo">
       <svg class="header__logo-icon">
         <use xlink:href="./img/sprite.svg#logo"></use>
       </svg>
     </div>
-    <nav class="header__nav nav">
+    <nav class="header__nav nav" data-menu>
       <ul class="nav__list list-reset">
         <li class="nav__item">
-          <a href="#" class="nav__link">О комплексе</a>
+          <a href="#features" class="nav__link" data-menu-item>О комплексе</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Район</a>
+          <a href="#distirct" class="nav__link" data-menu-item>Район</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Каталог квартир</a>
+          <a href="#appartments" class="nav__link" data-menu-item>Каталог квартир</a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link">Ипотека</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Контакты</a>
+          <a href="#footer" class="nav__link" data-menu-item>Контакты</a>
         </li>
       </ul>
     </nav>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
