@@ -1,11 +1,20 @@
 .feedback-bottom {
   padding: 180px 0;
 
+  @include small-tablet {
+    padding: 90px 0;
+  }
+
   & .form {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     gap: 30px;
+
+    @include small-tablet {
+      display:  grid;
+      grid-template-columns: 1fr;
+    }
   }
 
   & .form__text {

@@ -32,12 +32,12 @@
       color: var(--color-dark);
     }
 
-    @media ( max-width: 959px ) {
+    @include small-tablet {
       font-size: 22px;
     }
   }
 
-  @media ( max-width: 959px) {
+  @include small-tablet {
     position: fixed;
     top: 0;
     left: 0;

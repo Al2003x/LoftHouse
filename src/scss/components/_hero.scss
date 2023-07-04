@@ -6,8 +6,8 @@
       #242b33 92.19%
     ),
     url("../img/header-bg.jpg");
+  background-position-y: 785px;
   padding-top: 296px;
-  padding-bottom: 74px;
 
   &__wrapper {
     max-width: 582px;
@@ -37,6 +37,11 @@
       height: 40px;
       fill: var(--color-accent);
     }
+
+    @include small-tablet {
+      font-size: 32px;
+      padding-bottom: 100px;
+    }
   }
 
   &__links {
@@ -44,6 +49,14 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 200px;
+    margin-bottom: 74px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 150px;
+      margin-bottom: 65px;
+    }
   }
 
   &__link {

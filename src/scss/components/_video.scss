@@ -7,18 +7,13 @@
     content: "IV";
     left: calc(50% + 555px);
     transform: translate(-50%, 0%);
-
-    @include beforeNumber;
-
-    top: 127px;
+    @include beforeNumber
   }
 
   &__link {
-    width: 720px;
-    height: 650px;
-    margin: 0 auto;
     position: relative;
-    display: block;
+    display: inline-block;
+    text-align: center;
 
     &:before {
       content: "";
@@ -41,16 +36,15 @@
   }
 
   &__icon {
-    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-in;
-  }
 
-  &__image {
-    width: 720px;
-    height: 650px;
+    @include small-tablet {
+      width: 80px;
+		  height: 80px;
+    }
   }
 }

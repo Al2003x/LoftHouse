@@ -47,6 +47,6 @@ function init(){
 	map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
 	map.geoObjects.add(myPlacemark);
-    myPlacemark.balloon.open();
+  
 
 }
