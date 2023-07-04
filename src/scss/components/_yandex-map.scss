@@ -39,7 +39,9 @@
 }
 
 [class*="balloon__close-button"] {
-  background: url("../../img/svg/cross.svg") 50% no-repeat !important;
+  background-image: url("../img/cross.svg") !important;
+  background-repeat: no-repeat;
+  background-position: 50%;
   width: 15px !important;
   height: 15px !important;
   margin: 10px 7px;
